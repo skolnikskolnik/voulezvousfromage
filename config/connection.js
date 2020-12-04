@@ -13,7 +13,9 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var connection = mysql.createConnection({
+var connection;
+
+connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
@@ -35,3 +37,6 @@ app.listen(PORT, function () {
     // Log (server-side) when our server has started
     console.log("Server listening on: http://localhost:" + PORT);
 });
+
+// Export connection for our ORM to use.
+module.exports = connection;
