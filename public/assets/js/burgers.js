@@ -18,7 +18,7 @@ $(function () {
                 devourList.append(`<li>${burgerName} <button type=button class="btn btn-primary devourButton" data-burgerId="${burgerId}">Devour</button></li><br>`);
             }
             else {
-                deleteList.append(`<li>${burgerName} <button type=button class="btn btn-primary deleteButton" data-burgerId="${burgerId}">Delete</button></li><br>`);
+                deleteList.append(`<li>${burgerName} <button type=button class="btn btn-danger deleteButton" data-burgerId="${burgerId}">Delete</button></li><br>`);
             }
 
         }
