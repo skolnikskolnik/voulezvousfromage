@@ -16,6 +16,17 @@ router.get("/burgers", function(req,res){
     burger.selectAll(function(data) {
         res.json({ burgers: data });
       });
-})
+});
+
+// //When user hits submit, a new burger is added
+router.post("/burgers", function(req,res){
+    burger.insertOne([
+        "burger_name"
+    ], [
+        req.body.burger_name
+    ]), function(result){
+        res.json(result);
+    }
+});
 // Export routes for server.js to use.
 module.exports = router;
