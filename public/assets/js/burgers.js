@@ -62,4 +62,18 @@ $(function () {
             location.reload();
         })
     });
+
+    //When delete button is hit, burger is deleted
+    $(document).on("click", ".deleteButton", function(event){
+        event.preventDefault();
+        
+        var id = $(this).data("burgerid");
+        
+        $.ajax(`/burgers/${id}`,{
+            type: "DELETE"
+        }).then(function(){
+            console.log("Successfully deleted");
+            location.reload();
+        })
+    })
 });
