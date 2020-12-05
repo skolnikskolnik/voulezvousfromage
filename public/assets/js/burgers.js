@@ -15,10 +15,10 @@ $(function () {
 
             if (!isDevoured) {
 
-                devourList.append(`<li>${burgerName}<button type=button class="devourButton" data-burgerId="${burgerId}">Devour</button></li>`);
+                devourList.append(`<li>${burgerName} <button type=button class="btn btn-primary devourButton" data-burgerId="${burgerId}">Devour</button></li><br>`);
             }
             else {
-                deleteList.append(`<li>${burgerName}<button type=button class="deleteButton" data-burgerId="${burgerId}">Delete</button></li>`);
+                deleteList.append(`<li>${burgerName} <button type=button class="btn btn-primary deleteButton" data-burgerId="${burgerId}">Delete</button></li><br>`);
             }
 
         }
@@ -72,7 +72,6 @@ $(function () {
         $.ajax(`/burgers/${id}`,{
             type: "DELETE"
         }).then(function(){
-            console.log("Successfully deleted");
             location.reload();
         })
     })
