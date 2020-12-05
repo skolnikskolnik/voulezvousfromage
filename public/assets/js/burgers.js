@@ -15,10 +15,10 @@ $(function () {
 
             if (!isDevoured) {
 
-                devourList.append(`<li>${burgerName} <button type=button class="btn btn-primary devourButton" data-burgerId="${burgerId}">Devour</button></li><br>`);
+                devourList.append(`<li>${burgerName} <button type=button class="btn btn-primary devourButton rightBtn" data-burgerId="${burgerId}">Devour</button></li><br>`);
             }
             else {
-                deleteList.append(`<li>${burgerName} <button type=button class="btn btn-danger deleteButton" data-burgerId="${burgerId}">Delete</button></li><br>`);
+                deleteList.append(`<li>${burgerName} <button type=button class="btn btn-danger deleteButton rightBtn" data-burgerId="${burgerId}">Delete</button></li><br>`);
             }
 
         }

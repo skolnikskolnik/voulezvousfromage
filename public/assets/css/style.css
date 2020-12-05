@@ -12,3 +12,7 @@ h1{
 .delete-button{
     background-color: red;
 }
+
+.rightBtn{
+    float: right;
+}
