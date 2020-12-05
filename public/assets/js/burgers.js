@@ -42,4 +42,24 @@ $(function () {
             location.reload();
         });
         })
+
+    //When a devour button is hit, change "devoured" from false to true
+    $(document).on("click", ".devourButton", function(event){
+        event.preventDefault();
+
+        let id = $(this).data("burgerid");
+
+        let newDevouredState = {
+            devoured: true
+        }
+
+        $.ajax(`/burgers/${id}`, {
+            type: "PUT",
+            data: JSON.stringify(newDevouredState),
+            dataType: 'json',
+            contentType: 'application/json'
+        }).then(function(){
+            location.reload();
+        })
+    });
 });
