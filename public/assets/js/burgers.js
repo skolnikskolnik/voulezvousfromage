@@ -27,6 +27,7 @@ $(function () {
     //Want to add to the list when user hits the submit button
     $(document).on("click", ".submit", function(event){
         event.preventDefault();
+        
         let newBurger = {
             burger_name: $("#newBurger").val().trim()
         };

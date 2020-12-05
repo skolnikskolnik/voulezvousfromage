@@ -24,9 +24,10 @@ router.post("/burgers", function(req,res){
         "burger_name"
     ], [
         req.body.burger_name
-    ]), function(result){
+    ], function(result){
+        console.log("TEEESSSTTTT");
         res.json(result);
-    }
+    });
 });
 // Export routes for server.js to use.
 module.exports = router;
