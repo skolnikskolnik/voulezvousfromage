@@ -15,6 +15,8 @@
 ## Description and images of the project: 
 This application is designed for restaurants to keep track of custom burger orders. Users can enter the type of burger they want, and it will appear on the screen. Once the user has consumed the burger, he or she can then click the "Devour" button, which will move the entry to the "To delete" section. Users can then delete their burger.
 
+This application is deployed in <a href='https://cryptic-brook-18545.herokuapp.com/'>heroku.</a>   
+
 When the user arrives he or she is greeted with the following screen:
 ![welcome screen](./images/img1.JPG)
 
